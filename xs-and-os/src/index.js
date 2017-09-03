@@ -99,6 +99,7 @@ class Game extends React.Component {
   jumpTo(step) {
     this.setState({
       stepNumber: step,
+      history: this.state.history.slice(0, step + 1),
       xIsNext: (step % 2) === 0,
     });
   }
